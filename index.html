@@ -1,13 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <h1>welcome</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium nam sint reprehenderit debitis minima officiis modi. Repellendus, laboriosam quam magni autem, ad a quae, officia sapiente mollitia id maxime?</p>
+  <h1 id="title">freeCodeCamp Survey Form
+  </h1>
+  <p id="description">Thank you for taking the time to help us improve the platform</p>
+  <form id="survey-form">
+    <label id="name-label" for="name">Name:</label>
+    <br>
+    <input type="text" id="name" name="name" required placeholder="Enter your Name"><br>
+    <br>
+    <label id="email-label" for="email">Email:</label>
+    <br>
+    <input type="email" id="email" name="email" required placeholder="Enter your Email"><br>
+    <br>
+    <label id="number-label" for="age">Age (optional):</label>
+    <br>
+    <input type="number" id="number" name="age" min="10" max="100" required placeholder="age"><br>
+    <br>
+    <label for="gender">What your favorite feature of freeCodeCamp?</label>
+    <br>
+    <select id="dropdown" name="gender" required>
+      <option value="">Select an option</option>
+      <option value="male">Challenges</option>
+      <option value="female">Projects</option>
+    </select>
+    <p>Would you recommend freeCodeCamp to a friend?</p>
+    <label>
+      <input name="user-recommend" value="definitely" type="radio" class="input-radio" />Definitely</label>
+    <label>
+      <input name="user-recommend" value="maybe" type="radio" class="input-radio" />Maybe</label>
+
+    <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio" />Not sure</label>
+    <p>What would you like to see improved?</p>
+    <label>
+      <input name="user-recommend" value="definitely" type="checkbox" class="input-radio" />Challenges</label>
+    <label>
+      <input name="user-recommend" value="maybe" type="checkbox" class="input-radio" />Videos</label>
+    <p>Any comments or suggestions?</p>
+    <textarea id="feedback" name="feedback"></textarea><br>
+
+    <input type="submit" id="submit" value="Submit">
+  </form>
 </body>
+
 </html>
